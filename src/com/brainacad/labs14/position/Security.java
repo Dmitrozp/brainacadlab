@@ -8,7 +8,7 @@ public class Security extends Employee {
 
     @Override
     public String toString() {
-        super.toString();
+        System.out.println(super.toString());
         return "Security{" +
                 "department='" + department + '\'' +
                 '}';

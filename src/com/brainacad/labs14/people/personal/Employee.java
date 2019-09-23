@@ -47,6 +47,7 @@ public class Employee extends Man {
 
     @Override
     public String toString() {
+        System.out.println(super.toString());
         return "Employee{" +
                 "dateOfRecruitment='" + dateOfRecruitment + '\'' +
                 ", wages=" + wages +

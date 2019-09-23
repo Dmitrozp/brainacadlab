@@ -46,5 +46,9 @@ public class Main {
         System.out.println("hashCOde cashier = " + shop.cashier.hashCode());
         System.out.println("hashCOde manager = " + shop.manager.hashCode());
         System.out.println("hashCOde security = " + shop.security.hashCode());
+
+        System.out.println(shop.security.toString());
+        System.out.println(shop.manager.toString());
+        System.out.println(shop.cashier.toString());
 }
 }

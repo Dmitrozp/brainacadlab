@@ -55,7 +55,7 @@ public class Manager extends Employee {
 
     @Override
     public String toString() {
-        super.toString();
+        System.out.println(super.toString());
         return "Manager{" +
                 "department='" + department + '\'' +
                 '}';
