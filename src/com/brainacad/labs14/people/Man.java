@@ -2,7 +2,7 @@ package com.brainacad.labs14.people;
 
 import java.util.Objects;
 
-public class Man {
+public abstract class Man {
 
     private String firstSecondName;
     private String dateOfBirth;
