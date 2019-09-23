@@ -9,7 +9,7 @@ public class Man {
     private int phoneNumber;
 
 
-    public void Man(String firstSecondName, String dateOfBirth){
+    public Man(String firstSecondName, String dateOfBirth){
         this.firstSecondName = firstSecondName;
         this.dateOfBirth = dateOfBirth;
     }
@@ -20,8 +20,6 @@ public class Man {
                             "\nДата рождения: " + dateOfBirth +
                             "\nНомер телефона: " + phoneNumber);
     }
-
-    public void Man(){}
 
     public void sayHello(){
         System.out.println("");

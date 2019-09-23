@@ -22,13 +22,12 @@ public class Employee extends Man {
                             "\nЗарплата:" + wages);
     }
 
-    public void Employee(String firstSecondName, String dateOfBirth, String dateOfRecruitment, int wages){
-        super.Man(firstSecondName,dateOfBirth);
+    public Employee(String firstSecondName, String dateOfBirth, String dateOfRecruitment, int wages){
+        super(firstSecondName,dateOfBirth);
         this.dateOfRecruitment = dateOfRecruitment;
         this.wages = wages;
     }
 
-    public void Employee(){}
 
     @Override
     public boolean equals(Object o) {

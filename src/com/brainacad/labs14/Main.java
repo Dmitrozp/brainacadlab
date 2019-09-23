@@ -12,15 +12,12 @@ public class Main {
 
         Shop shop = new Shop();
         shop.Shop("Магазин № 1", "ул. Победы 133");
-        Client client = new Client();
+        Client client = new Client("Васильев Саша", "22/02/1985", 23646857 );
 
-        shop.manager = new Manager();
-        shop.cashier = new Cashier();
-        shop.security = new Security();
 
-        shop.manager.Employee("Степанов Федор", "22/02/1985", "12/02/2020", 1500);
-        shop.cashier.Employee("Еремова Анна", "12/03/1954", "01/02/2019", 2500);
-        shop.security.Employee("Степанов Саша", "29/02/1977", "12/12/2018", 1100);
+        shop.manager = new Manager("Степанов Федор", "22/02/1985", "12/02/2020", 1500, "Департамент продаж");
+        shop.cashier = new Cashier("Еремова Анна", "12/03/1954", "01/02/2019", 2500, 7);
+        shop.security = new Security("Степанов Саша", "29/02/1977", "12/12/2018", 1100, "Департамент охраны");
 
         shop.openShop();
         shop.security.goToWork();

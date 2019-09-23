@@ -7,6 +7,11 @@ public class Cashier extends Employee {
 
     private int numberCashDesk;
 
+    public Cashier(String firstSecondName, String dateOfBirth, String dateOfRecruitment, int wages, int numberCashDesk) {
+        super(firstSecondName, dateOfBirth, dateOfRecruitment, wages);
+        this.numberCashDesk = numberCashDesk;
+    }
+
     public void checkTheMoney(){};
     public int getNumberCashDesk() {
         return numberCashDesk;

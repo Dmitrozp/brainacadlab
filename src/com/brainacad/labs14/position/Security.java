@@ -6,6 +6,11 @@ public class Security extends Employee {
 
     private String department;
 
+    public Security(String firstSecondName, String dateOfBirth, String dateOfRecruitment, int wages, String department) {
+        super(firstSecondName, dateOfBirth, dateOfRecruitment, wages);
+        this.department = department;
+    }
+
     @Override
     public String toString() {
         System.out.println(super.toString());

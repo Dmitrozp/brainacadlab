@@ -7,6 +7,11 @@ public class Manager extends Employee {
 
     private String department;
 
+    public Manager(String firstSecondName, String dateOfBirth, String dateOfRecruitment, int wages, String department) {
+        super(firstSecondName, dateOfBirth, dateOfRecruitment, wages);
+        this.department = department;
+    }
+
     public void toAdvise(){
         System.out.println("Консультант рассказывает о товаре");
     }

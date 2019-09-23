@@ -19,10 +19,9 @@ public class Client extends Man {
         System.out.println("Клиент покупает товар");
     }
 
-    public void Client(String firstSecondName, String dateOfBirth, int discountCard, double amountOfMoney){
-        super.Man(firstSecondName,dateOfBirth);
+    public Client(String firstSecondName, String dateOfBirth, int discountCard) {
+        super(firstSecondName, dateOfBirth);
         this.discountCard = discountCard;
-        this.amountOfMoney = amountOfMoney;
     }
 
     public void Client(){}
