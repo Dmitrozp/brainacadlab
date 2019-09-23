@@ -40,6 +40,10 @@ public class Main {
         shop.manager.showInfo();
         shop.security.showInfo();
         shop.cashier.setNumberCashDesk(12);
-        shop.cashier.showInfo();;
+        shop.cashier.showInfo();
+
+        System.out.println("hashCOde cashier = " + shop.cashier.hashCode());
+        System.out.println("hashCOde manager = " + shop.manager.hashCode());
+        System.out.println("hashCOde security = " + shop.security.hashCode());
 }
 }
