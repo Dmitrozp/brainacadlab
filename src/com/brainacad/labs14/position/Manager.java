@@ -14,8 +14,7 @@ public class Manager extends Employee {
     @Override
     public void showInfo(){
         super.showInfo();
-        System.out.println("\nДепартамент: " + department );
-        System.out.println("---------------------------------------------"  );
+        System.out.println("Департамент: " + department );
     }
 
     @Override

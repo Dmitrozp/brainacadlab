@@ -1,8 +1,5 @@
 package com.brainacad.labs14.people;
 
-import javax.xml.crypto.Data;
-import java.sql.Date;
-import java.time.LocalDate;
 import java.util.Objects;
 
 public class Man {
@@ -18,7 +15,8 @@ public class Man {
     }
 
     public void showInfo(){
-        System.out.println("Фамилия Имя: " + firstSecondName +
+        System.out.println("--------------------------------------" +
+                            "\nФамилия Имя: " + firstSecondName +
                             "\nДата рождения: " + dateOfBirth +
                             "\nНомер телефона: " + phoneNumber);
     }

@@ -18,8 +18,7 @@ public class Cashier extends Employee {
     @Override
     public void showInfo(){
         super.showInfo();
-        System.out.println("\nНомер кассы: " + numberCashDesk );
-        System.out.println("---------------------------------------------"  );
+        System.out.println("Номер кассы: " + numberCashDesk );
     }
 
     @Override

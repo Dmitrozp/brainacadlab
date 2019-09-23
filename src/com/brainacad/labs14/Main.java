@@ -35,13 +35,14 @@ public class Main {
 
         shop.goToLunch();
 
-        System.out.println("\n----Персонал магазина----");
+        System.out.println("\n----------Персонал магазина-----------");
         shop.manager.setDepartment("Департамент продаж");
         shop.manager.showInfo();
         shop.security.showInfo();
         shop.cashier.setNumberCashDesk(12);
         shop.cashier.showInfo();
 
+        System.out.println("\n----------------------------------------------");
         System.out.println("hashCOde cashier = " + shop.cashier.hashCode());
         System.out.println("hashCOde manager = " + shop.manager.hashCode());
         System.out.println("hashCOde security = " + shop.security.hashCode());
