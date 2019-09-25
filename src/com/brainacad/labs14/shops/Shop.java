@@ -68,4 +68,5 @@ public class Shop {
                 ", security=" + security +
                 '}';
     }
+
 }
