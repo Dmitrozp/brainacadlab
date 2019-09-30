@@ -43,16 +43,14 @@ public class Main {
     }
 
 
-        public void allDeviceOn(AbstractDevice ... abstractdevice){
-            abstractdevice.powerOn();
-
+        public static void allDeviceOn(AbstractDevice ... abstractdevice){
+            if  (abstractdevice != null){
+        abstractdevice[].powerOn();
+        breake;
         }
-        
+
+        public static void mailSender(){
 
 
-
-
-
-
-
+   }
 }
