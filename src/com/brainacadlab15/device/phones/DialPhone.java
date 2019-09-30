@@ -1,6 +1,8 @@
 package com.brainacadlab15.device.phones;
 
-public class DialPhone extends Phone {
+import com.brainacadlab15.device.interfaces.Caller;
+
+public class DialPhone extends Phone implements Caller {
 
     private boolean hasAnswerphone;
 

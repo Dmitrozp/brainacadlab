@@ -40,7 +40,13 @@ public class Main {
         multicooker.powerOff();
         multicooker.setStatusOn(false);
         multicooker.cook();
+    }
 
+
+        public void allDeviceOn(AbstractDevice ... abstractdevice){
+            abstractdevice.powerOn();
+
+        }
         
 
 
@@ -48,5 +54,5 @@ public class Main {
 
 
 
-    }
+
 }

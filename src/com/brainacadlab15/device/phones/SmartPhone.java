@@ -1,6 +1,9 @@
 package com.brainacadlab15.device.phones;
 
-public class SmartPhone extends Mobile {
+import com.brainacadlab15.device.interfaces.Caller;
+import com.brainacadlab15.device.interfaces.EmailSender;
+
+public class SmartPhone extends Mobile implements Caller, EmailSender {
 
     private String os;
 
@@ -21,5 +24,22 @@ public class SmartPhone extends Mobile {
 
     public void setOs(String os) {
         this.os = os;
+    }
+
+    @Override
+    public String editMail(String s) {
+        System.out.println("Редактировать маил");
+        return null;
+    }
+
+    @Override
+    public String createMail(String s) {
+        System.out.println("Создает и-мэил");
+        return null;
+    }
+
+    @Override
+    public void sendMail(String s) {
+        System.out.println("Отправка и-маила");
     }
 }
