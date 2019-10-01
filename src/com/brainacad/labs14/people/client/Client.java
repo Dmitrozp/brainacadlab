@@ -1,11 +1,10 @@
 package com.brainacad.labs14.people.client;
 
-import com.brainacad.labs14.people.Man;
+import com.brainacad.labs14.people.Human;
 
-import java.time.LocalDate;
 import java.util.Objects;
 
-public class Client extends Man {
+public class Client extends Human {
 
     private int discountCard;
     private double amountOfMoney;

@@ -1,6 +1,8 @@
 package com.brainacadlab15.device.phones;
 
-public class Mobile extends Phone {
+import com.brainacadlab15.device.interfaces.EmailSender;
+
+public class Mobile extends Phone implements EmailSender {
 
     private int simCount;
     private boolean display;
@@ -40,4 +42,19 @@ public class Mobile extends Phone {
         return display;
     }
 
+    @Override
+    public String editMail(String s) {
+        return null;
+    }
+
+    @Override
+    public String createMail(String s) {
+        return null;
+    }
+
+    @Override
+    public void sendMail(String s) {
+        System.out.println("Отправка имэила с телефона, через gprs");
+
+    }
 }
