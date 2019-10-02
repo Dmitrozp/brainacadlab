@@ -2,6 +2,8 @@ package com.brainacad.laba16;
 
 public class StringTest {
 
+    public static final String[] mounth = new String[12] = {"ЯНВАРЬ", "Февраль", "МАРТ");
+
     public static void main(String[] args) {
 
        String liter;
@@ -15,13 +17,17 @@ public class StringTest {
         srtarray = liter.split(",");
 
         for (int i = 0; i<srtarray.length; i++){
-            String max;
-            if (max.length() == srtarray[i].length()){
+            String max = " ";
+            if (max.length() < srtarray[i].length()){
                 max = srtarray[i];
             }
+            System.out.println(max.toLowerCase());
         }
 
-        
+
+
+
+
 
 
 
