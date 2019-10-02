@@ -2,14 +2,14 @@ package com.brainacad.labs14.people;
 
 import java.util.Objects;
 
-public abstract class Man {
+public abstract class Human {
 
     private String firstSecondName;
     private String dateOfBirth;
     private int phoneNumber;
 
 
-    public Man(String firstSecondName, String dateOfBirth){
+    public Human(String firstSecondName, String dateOfBirth){
         this.firstSecondName = firstSecondName;
         this.dateOfBirth = dateOfBirth;
     }
@@ -33,7 +33,7 @@ public abstract class Man {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Man man = (Man) o;
+        Human man = (Human) o;
         return phoneNumber == man.phoneNumber &&
                 firstSecondName.equals(man.firstSecondName) &&
                 dateOfBirth.equals(man.dateOfBirth);

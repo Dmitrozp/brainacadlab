@@ -40,6 +40,6 @@ public class SmartPhone extends Mobile implements Caller, EmailSender {
 
     @Override
     public void sendMail(String s) {
-        System.out.println("Отправка и-маила");
+        System.out.println("Отправка и-маила со смартфона, через 4G");
     }
 }

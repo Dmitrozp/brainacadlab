@@ -1,11 +1,10 @@
 package com.brainacad.labs14.people.personal;
 
-import com.brainacad.labs14.people.Man;
+import com.brainacad.labs14.people.Human;
 
-import java.time.LocalDate;
 import java.util.Objects;
 
-public class Employee extends Man {
+public class Employee extends Human {
 
     private String dateOfRecruitment;
     private int wages;
