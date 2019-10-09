@@ -5,7 +5,7 @@ public class UserBank {
     public static void main(String[] args) {
 
         try {
-            MoneyTransactionUtil.sendMoneyTo(1212121, 12121288, -1454);
+            MoneyTransactionUtil.sendMoneyTo(1212121, 1212121456, 1454);
         }
 
         catch (MoneyValueExeption m){
@@ -23,11 +23,11 @@ public class UserBank {
                     "транзакции банка произошла ошибка RuntimeException");
         }
 
-        try {
-            StackOverFlowTest.test();
-        }
-        catch (StackOverflowError e){
-            System.out.println("\nПроизошла ошибка StackOverFlowTest");
-        }
+//        try {
+//            StackOverFlowTest.test();
+//        }
+//        catch (StackOverflowError e){
+//            System.out.println("\nПроизошла ошибка StackOverFlowTest");
+//        }
     }
 }

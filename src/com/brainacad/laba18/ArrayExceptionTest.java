@@ -11,6 +11,7 @@ public class ArrayExceptionTest  {
         int [] mass = new int[] {1,2,3,4,5,6,7,8};
 
 
+
         try {
             //test.printArray(mass, 2, 7);
             ArrayExceptionTest.printArray2(mass, 2,9);

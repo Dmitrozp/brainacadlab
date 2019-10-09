@@ -3,8 +3,11 @@ package com.brainacad.laba18;
 public class MoneyTransactionUtil {
 
 
-    public MoneyTransactionUtil() {
-    }
+    public MoneyTransactionUtil(){}
+
+    public void test(){}
+
+
 
     public static void sendMoneyTo(int sendNumberCard, int recipientNumberCard, double amountOfTransfer) throws RuntimeException{
 
