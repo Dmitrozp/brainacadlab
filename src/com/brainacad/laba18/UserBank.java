@@ -23,6 +23,11 @@ public class UserBank {
                     "транзакции банка произошла ошибка RuntimeException");
         }
 
-
+        try {
+            StackOverFlowTest.test();
+        }
+        catch (StackOverflowError e){
+            System.out.println("\nПроизошла ошибка StackOverFlowTest");
+        }
     }
 }

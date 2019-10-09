@@ -2,13 +2,11 @@ package com.brainacad.laba16;
 
 public class StringTest {
 
-    public static final String[] mounth = new String[12] = {"ЯНВАРЬ", "Февраль", "МАРТ");
-
     public static void main(String[] args) {
 
        String liter;
        String str = new String();
-       String[] srtarray = new String[];
+       String[] srtarray = new String[5];
        byte bytearray[];
        StringBuilder srtbild = new StringBuilder();
 

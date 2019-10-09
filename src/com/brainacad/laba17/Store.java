@@ -9,11 +9,11 @@ public class Store {
     public User[] allUsers;
     public User[] loginUsers;
 
-    public void checkLogin(String name, int password) throws IOException{
+    public void checkLogin(String name, int password) {
         for (int i = 0; i<allUsers.length; i++){
             if (allUsers[i].checkUserClient(name, password)) {
                 System.out.println("Юзер авторизирован");
-                throw new IOException;
+
             }
             System.out.println("Юзер не авторизирован");
         }
