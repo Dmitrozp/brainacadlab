@@ -1,6 +1,6 @@
-package com.brainacadlab15.device.phones;
+package com.brainacad.laba15.phones;
 
-import com.brainacadlab15.device.interfaces.EmailSender;
+import com.brainacad.laba15.interfaces.EmailSender;
 
 public class Mobile extends Phone implements EmailSender {
 

@@ -1,6 +1,6 @@
-package com.brainacadlab15.device.phones;
+package com.brainacad.laba15.phones;
 
-import com.brainacadlab15.device.AbstractDevice;
+import com.brainacad.laba15.AbstractDevice;
 
 abstract class Phone extends AbstractDevice {
 

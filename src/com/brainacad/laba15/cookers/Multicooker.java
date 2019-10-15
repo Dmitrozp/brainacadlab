@@ -1,6 +1,4 @@
-package com.brainacadlab15.device.cookers;
-
-import com.brainacadlab15.device.AbstractDevice;
+package com.brainacad.laba15.cookers;
 
 public class Multicooker extends AbstractCooker{
 

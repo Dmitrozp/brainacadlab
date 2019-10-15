@@ -1,6 +1,6 @@
-package com.brainacadlab15.device.phones;
+package com.brainacad.laba15.phones;
 
-import com.brainacadlab15.device.interfaces.Caller;
+import com.brainacad.laba15.interfaces.Caller;
 
 public class DialPhone extends Phone implements Caller {
 

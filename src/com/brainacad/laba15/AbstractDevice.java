@@ -1,4 +1,4 @@
-package com.brainacadlab15.device;
+package com.brainacad.laba15;
 
 public abstract class AbstractDevice {
 

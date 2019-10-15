@@ -1,4 +1,4 @@
-package com.brainacadlab15.device.cookers;
+package com.brainacad.laba15.cookers;
 
 public class Oven extends AbstractCooker{
 

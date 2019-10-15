@@ -1,7 +1,7 @@
-package com.brainacadlab15.device.phones;
+package com.brainacad.laba15.phones;
 
-import com.brainacadlab15.device.interfaces.Caller;
-import com.brainacadlab15.device.interfaces.EmailSender;
+import com.brainacad.laba15.interfaces.Caller;
+import com.brainacad.laba15.interfaces.EmailSender;
 
 public class SmartPhone extends Mobile implements Caller, EmailSender {
 

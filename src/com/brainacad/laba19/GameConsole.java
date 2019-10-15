@@ -27,8 +27,6 @@ public class GameConsole {
             this.brand = brand;
         }
 
-        public Gamepad(){}
-
 
         public Brand getBrand() {
             return brand;

@@ -20,8 +20,8 @@ public class Game {
     }
 
    public static class GameDisk{
-        private final String description;
-        private final Game data;
+       // private final String description;
+       // private final Game data;
 
    }
 

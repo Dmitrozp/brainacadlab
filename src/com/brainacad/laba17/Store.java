@@ -13,7 +13,6 @@ public class Store {
         for (int i = 0; i<allUsers.length; i++){
             if (allUsers[i].checkUserClient(name, password)) {
                 System.out.println("Юзер авторизирован");
-
             }
             System.out.println("Юзер не авторизирован");
         }
@@ -24,8 +23,5 @@ public class Store {
             this.checkLogin("sdcsdsd", 1214525);
 
     }
-
-
-
 
 }

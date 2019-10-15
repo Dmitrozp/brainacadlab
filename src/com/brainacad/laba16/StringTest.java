@@ -2,6 +2,7 @@ package com.brainacad.laba16;
 
 public class StringTest {
 
+
     public static void main(String[] args) {
 
        String liter;
@@ -21,14 +22,6 @@ public class StringTest {
             }
             System.out.println(max.toLowerCase());
         }
-
-
-
-
-
-
-
-
 
     }
 

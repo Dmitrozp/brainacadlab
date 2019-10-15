@@ -1,11 +1,11 @@
-package com.brainacadlab15.device;
+package com.brainacad.laba15;
 
-import com.brainacadlab15.device.cookers.Multicooker;
-import com.brainacadlab15.device.cookers.Oven;
-import com.brainacadlab15.device.interfaces.EmailSender;
-import com.brainacadlab15.device.phones.DialPhone;
-import com.brainacadlab15.device.phones.Mobile;
-import com.brainacadlab15.device.phones.SmartPhone;
+import com.brainacad.laba15.phones.DialPhone;
+import com.brainacad.laba15.phones.Mobile;
+import com.brainacad.laba15.phones.SmartPhone;
+import com.brainacad.laba15.cookers.Multicooker;
+import com.brainacad.laba15.cookers.Oven;
+import com.brainacad.laba15.interfaces.EmailSender;
 
 public class Main {
     public static void main(String[] args) {
