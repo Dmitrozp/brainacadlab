@@ -6,9 +6,10 @@ public class Game {
     private final Ganre ganre;
     private Type type;
 
-    private Game(String name, Ganre ganre) {
+    private Game(String name, Ganre ganre, Type type) {
         this.name = name;
         this.ganre = ganre;
+        this.type = type;
     }
 
     public Type getType() {
@@ -19,10 +20,45 @@ public class Game {
         this.type = type;
     }
 
-   public static class GameDisk{
-       // private final String description;
-       // private final Game data;
+    public static GameDisk getDisk(String name, Ganre ganre, Type type, String description){
+        return new GameDisk(name, ganre, type, description);
 
+    }
+
+
+    public static class GameDisk{
+
+        private String description;
+        private Game data;
+
+        private Game GameDisk(String name, Ganre ganre, Type type, String description) {
+            new Game(name, ganre, type);
+            this.description = description;
+        }
+   }
+
+   public static class VirtualGame{
+
+        private int rating;
+        private  final Game data;
+
+       private VirtualGame(String name, Ganre ganre, int rating, Game data) {
+           new Game(name,ganre, Type.VIRTUAL);
+           this.rating = rating;
+           this.data = data;
+       }
+
+       public int getRating() {
+           return rating;
+       }
+
+       public void setRating(int rating) {
+           this.rating = rating;
+       }
+
+       public Game getData() {
+           return data;
+       }
    }
 
 

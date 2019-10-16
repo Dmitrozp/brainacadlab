@@ -12,21 +12,16 @@ public class GameConsole {
     class Gamepad{
         private final Brand brand;
         private String consoleSerial;
-        private int connectedNumber;
+        private final int connectedNumber;
         private Color color;
         private int chargeLevel = 100;
         private boolean isOn;
 
-        public Gamepad(Brand brand, int connectedNumber) {
+        public Gamepad(Brand brand, int connectedNumber, String serial) {
             this.brand = brand;
             this.connectedNumber = connectedNumber;
             consoleSerial = serial;
         }
-
-        public Gamepad(Brand brand) {
-            this.brand = brand;
-        }
-
 
         public Brand getBrand() {
             return brand;
@@ -35,10 +30,6 @@ public class GameConsole {
         public String getConsoleSerial() {
             return consoleSerial;
        }
-
-        public void setConnectedNumber(int connectedNumber) {
-            this.connectedNumber = connectedNumber;
-        }
 
         public void setConsoleSerial(String consoleSerial) {
             this.consoleSerial = consoleSerial;
@@ -79,13 +70,8 @@ public class GameConsole {
         this.model = model;
         this.serial = serial;
 
-        firstGamepad = new Gamepad(Brand.SONY);
-        firstGamepad.setConnectedNumber(1);
-        firstGamepad.setConsoleSerial(serial);
-
-        secondGamepad = new Gamepad(Brand.MICROSOFT);
-        secondGamepad.setConnectedNumber(2);
-        secondGamepad.setConsoleSerial(serial);
+        this.firstGamepad = new Gamepad(brand,1, serial);
+        this.secondGamepad = new Gamepad(brand, 2, serial);
 
 
 
