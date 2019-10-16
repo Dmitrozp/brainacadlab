@@ -25,6 +25,11 @@ public class Game {
 
     }
 
+    public static VirtualGame getVirtualGame(String name, Ganre ganre){
+        return new VirtualGame(name,ganre);
+
+    }
+
 
     public static class GameDisk{
 
@@ -40,12 +45,11 @@ public class Game {
    public static class VirtualGame{
 
         private int rating;
-        private  final Game data;
+        private  Game data;
 
-       private VirtualGame(String name, Ganre ganre, int rating, Game data) {
+       private VirtualGame(String name, Ganre ganre) {
            new Game(name,ganre, Type.VIRTUAL);
-           this.rating = rating;
-           this.data = data;
+
        }
 
        public int getRating() {
