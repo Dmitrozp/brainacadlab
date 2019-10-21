@@ -36,7 +36,10 @@ public class Game {
         private String description;
         private Game data;
 
-        private Game GameDisk(String name, Ganre ganre, Type type, String description) {
+        public GameDisk(String name, Ganre ganre, Type type, String description) {
+        }
+
+        private void GameDisk(String name, Ganre ganre, Type type, String description) {
             new Game(name, ganre, type);
             this.description = description;
         }
