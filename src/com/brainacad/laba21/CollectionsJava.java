@@ -1,6 +1,8 @@
 package com.brainacad.laba21;
 
 import java.lang.reflect.Array;
+import java.math.BigInteger;
+import java.time.LocalDate;
 import java.util.*;
 
 public class CollectionsJava implements Comparable {
@@ -11,10 +13,18 @@ public class CollectionsJava implements Comparable {
         String[] mass1 = new String[]{"qwe", "asd", "zxc", "qaz", "wsx", "edc", "rfv", "rfv", "yhn", "ujm"};
         String[] mass2 = new String[]{"1", "8", "9", "2", "5", "3", "4", "6", "7", "0"};
 
+
         List<String> list1 = new ArrayList<>(Arrays.asList(mass1));
         List<String> list2 = new ArrayList<>(Arrays.asList(mass2));
 
-        //Collections.add(list1, "play", "game", "hi", "world", "apple", "word", "work");
+        List<User> list3 = new ArrayList<>(100);
+
+//        User userView = new User();
+//        list3.get(4).toString();
+//        System.out.println(list3.get(4).toString());
+//
+
+        //Collections.add(list1, Arrays.asList("play", "game", "hi", "world", "apple", "word", "work"));
         list1.add(5, "ПРивет ");
         list1.add("как дела");
         if (list1.addAll(5, list2)){
@@ -32,20 +42,45 @@ public class CollectionsJava implements Comparable {
             System.out.println("List1 = " + str);
         }
 
+
+        //g. *Удалить каждый второй элемент списка используя listiterator
+
+
         while (iterator.hasNext()){
             iterator.next();
-            System.out.println(iterator.next());
-            if(iterator.nextIndex()%2 == 0){
+            if(iterator.hasNext()) {
+                iterator.next();
                 iterator.remove();
             }
+
         }
 
 
+//        for(int i = 0; i<list1.size(); i = i + 2){
+//                System.out.println("даление лист" + i + list1.get(i));
+//                list1.remove(i);
+//        }
+
+
         System.out.println("---------------------Last List1 --------------------");
+//        List <String> listTemp = new ArrayList<>();
+//        String strtemp;
+//
+//        for(int i = 0; i<list1.size(); i = i + 2){
+//            strtemp = list1.get(i);
+//            listTemp.add(strtemp);
+//        }
+//
+//        Collections.copy(list1, listTemp);
+
+
         for (Object str : list1) {
             System.out.println("List1 = " + str);
         }
 
+
+
+        System.out.println("---------------------List2 --------------------");
         for (String str : list2) {
             System.out.println("List2 " + str);
         }
@@ -97,6 +132,7 @@ public class CollectionsJava implements Comparable {
         map2.putAll(map1);
         CollectionsJava.showAllMap(map1);
         CollectionsJava.showAllMap(map2);
+        CollectionsJava.showAllMapEntry(map1);
 
         Map<String, List<String>> map3  = new HashMap<>();
         
@@ -104,6 +140,13 @@ public class CollectionsJava implements Comparable {
         map3.put("Сидоров", Arrays.asList("telefon2", "skype2", "e-mail2"));
         map3.put("Иванов", Arrays.asList("telefon3", "skype3", "e-mail3"));
         map3.put("Степанов", Arrays.asList("telefon4", "skype4", "e-mail4"));
+
+        map3.get("Петров").add("почта 109");
+        map3.get("Петров").add("dsdas");
+        System.out.println(map3.get("Петров").toString());
+
+
+        //System.out.println(map3.get("Петров").toString());
 
         Set<User> userSet = new HashSet<>();
 
@@ -129,6 +172,16 @@ public class CollectionsJava implements Comparable {
         }
 
     }
+
+    public static void showAllMapEntry(Map<Integer, String> map) {
+
+        for (Map.Entry<Integer, String> entry : map.entrySet()) {
+            System.out.println("Номер = " + entry.getKey() + " Месяц = " + entry.getValue());
+
+        }
+
+    }
+
 
 
     @Override
