@@ -19,12 +19,6 @@ public class CollectionsJava implements Comparable {
 
         List<User> list3 = new ArrayList<>(100);
 
-//        User userView = new User();
-//        list3.get(4).toString();
-//        System.out.println(list3.get(4).toString());
-//
-
-        //Collections.add(list1, Arrays.asList("play", "game", "hi", "world", "apple", "word", "work"));
         list1.add(5, "ПРивет ");
         list1.add("как дела");
         if (list1.addAll(5, list2)){
@@ -42,10 +36,6 @@ public class CollectionsJava implements Comparable {
             System.out.println("List1 = " + str);
         }
 
-
-        //g. *Удалить каждый второй элемент списка используя listiterator
-
-
         while (iterator.hasNext()){
             iterator.next();
             if(iterator.hasNext()) {
@@ -54,13 +44,6 @@ public class CollectionsJava implements Comparable {
             }
 
         }
-
-
-//        for(int i = 0; i<list1.size(); i = i + 2){
-//                System.out.println("даление лист" + i + list1.get(i));
-//                list1.remove(i);
-//        }
-
 
         System.out.println("---------------------Last List1 --------------------");
 //        List <String> listTemp = new ArrayList<>();
@@ -134,19 +117,24 @@ public class CollectionsJava implements Comparable {
         CollectionsJava.showAllMap(map2);
         CollectionsJava.showAllMapEntry(map1);
 
-        Map<String, List<String>> map3  = new HashMap<>();
-        
-        map3.put("Петров", Arrays.asList("telefon1", "skype1", "e-mail1"));
-        map3.put("Сидоров", Arrays.asList("telefon2", "skype2", "e-mail2"));
-        map3.put("Иванов", Arrays.asList("telefon3", "skype3", "e-mail3"));
-        map3.put("Степанов", Arrays.asList("telefon4", "skype4", "e-mail4"));
+        Map<String, List<String>> map3  = new HashMap<>(10);
 
-        map3.get("Петров").add("почта 109");
+        List <String> listDefault = new ArrayList<>(Arrays.asList("telefon1", "skype1", "e-mail1"));
+
+        map3.put("Петров", CollectionsJava.addListToMap("telefon1", "skype1", "e-mail1"));
+        map3.put("Сидоров", CollectionsJava.addListToMap("telefon1", "skype1", "e-mail1"));
+        map3.put("Иванов", CollectionsJava.addListToMap("telefon1", "skype1", "e-mail1"));
+        map3.put("Степанов", CollectionsJava.addListToMap("telefon1", "skype1", "e-mail1"));
+        map3.put("Степанов2", CollectionsJava.addListToMap("telefon1", "skype1", "e-mail1"));
+
+
         map3.get("Петров").add("dsdas");
-        System.out.println(map3.get("Петров").toString());
+        map3.get("Петров").add("refref34");
+        map3.get("Петров").add("56h67h656t");
+        map3.get("Сидоров").add("111111");
 
+        System.out.println(map3.get("Сидоров").get(2));
 
-        //System.out.println(map3.get("Петров").toString());
 
         Set<User> userSet = new HashSet<>();
 
@@ -171,6 +159,13 @@ public class CollectionsJava implements Comparable {
 
         }
 
+    }
+
+    public static List addListToMap(String... arg){
+        String[] mass = new String[arg.length];
+        mass = arg;
+        List list = new ArrayList(Arrays.asList(mass));
+        return list;
     }
 
     public static void showAllMapEntry(Map<Integer, String> map) {
