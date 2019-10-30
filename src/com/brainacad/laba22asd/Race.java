@@ -1,10 +1,8 @@
-package com.brainacad.laba22thread;
+package com.brainacad.laba22asd;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.atomic.AtomicLong;
 
 public class Race {
 

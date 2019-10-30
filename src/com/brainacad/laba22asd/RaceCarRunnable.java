@@ -1,9 +1,9 @@
-package com.brainacad.laba22thread;
+package com.brainacad.laba22asd;
 
-import java.time.LocalDateTime;
-import java.util.Random;
+import com.brainacad.laba22asd.Car;
+import com.brainacad.laba22asd.Race;
+
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.atomic.AtomicLong;
 
 public class RaceCarRunnable extends Car implements Runnable {
     private double passedDistance;

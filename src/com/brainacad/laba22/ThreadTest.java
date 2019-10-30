@@ -11,12 +11,6 @@ public class ThreadTest implements Predicate {
 
     public static void main(String[] args) throws InterruptedException {
 
-        List<String> list = new ArrayList<>(Arrays.asList("asd", "sdfsd", "fsfs", "12312", "fsdf9");
-
-        String asd = "asd";
-
-        long as = list.stream().filter(asd::equals).count();
-
 
         Thread thread2 = new Thread(new RunnableClass2("Поток-2"));
         Thread thread3 = new Thread(new RunnableClass("Поток---3"));

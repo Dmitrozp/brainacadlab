@@ -1,4 +1,4 @@
-package com.brainacad.laba22thread;
+package com.brainacad.laba22asd;
 
 public class Car {
     private String name;
