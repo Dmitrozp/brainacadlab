@@ -3,6 +3,8 @@ package com.brainacad.laba22;
 public class RunnableClass implements Runnable {
     private String localName;
     public RunnableClass() { }
+
+
     public RunnableClass(String localName) {
         this.localName = localName;
     }
@@ -10,10 +12,17 @@ public class RunnableClass implements Runnable {
     @Override
     public void run() {
         System.out.println("run() " + localName + " running");
-        for (int i = 0; i<10; i++){
-            System.out.println("Поток " + localName + "= " + i);
+        for (int i = 0; i<50;  i++){
+            System.out.println( localName + "= " + i);
+            if(i==20){
+                try {
+                    Thread.sleep(10000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
             try {
-                Thread.sleep(500);
+                Thread.sleep((long)(Math.random()*10000/(i+1)));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
