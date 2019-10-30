@@ -2,8 +2,10 @@ package com.brainacad.laba22;
 
 public class RunnableClass2 implements Runnable {
     private String localName;
+
     public RunnableClass2() { }
-    public RunnableClass2(String localName) {
+    public RunnableClass2(String localName)
+    {
         this.localName = localName;
     }
 

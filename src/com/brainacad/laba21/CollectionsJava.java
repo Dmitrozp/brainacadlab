@@ -11,7 +11,7 @@ public class CollectionsJava implements Comparable {
     public static void main(String[] args) {
 
         String[] mass1 = new String[]{"qwe", "asd", "zxc", "qaz", "wsx", "edc", "rfv", "rfv", "yhn", "ujm"};
-        String[] mass2 = new String[]{"1", "8", "9", "2", "5", "3", "4", "6", "7", "0"};
+        String[] mass2 = new String[]{"1", "1", "2", "8", "9", "2", "5", "3", "4", "6", "7", "0"};
 
 
         List<String> list1 = new ArrayList<>(Arrays.asList(mass1));
@@ -127,6 +127,8 @@ public class CollectionsJava implements Comparable {
         map3.put("Степанов", CollectionsJava.addListToMap("telefon1", "skype1", "e-mail1"));
         map3.put("Степанов2", CollectionsJava.addListToMap("telefon1", "skype1", "e-mail1"));
 
+        map3.put("Степанов234", CollectionsJava.<Integer>addListToMap(1, 2, 3, 4, 5));
+
 
         map3.get("Петров").add("dsdas");
         map3.get("Петров").add("refref34");
@@ -165,6 +167,10 @@ public class CollectionsJava implements Comparable {
         String[] mass = new String[arg.length];
         mass = arg;
         List list = new ArrayList(Arrays.asList(mass));
+        return list;
+    }
+    public static<T> List addListToMap(T... arg){
+        List list = new ArrayList(Arrays.asList(arg));
         return list;
     }
 
