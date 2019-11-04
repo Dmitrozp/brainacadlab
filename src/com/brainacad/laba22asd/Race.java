@@ -1,40 +1,37 @@
 package com.brainacad.laba22asd;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class Race {
 
-    public static long startRaceTime;
-    RaceCarRunnable winner;
+    private static long startRaceTime;
+    private RaceCarRunnable winner;
+    public final static CountDownLatch countDownLatch = new CountDownLatch(4);
+
 
     public static void main(String[] args) throws InterruptedException {
 
-        CountDownLatch countDownLatch = new CountDownLatch(4);
-
-
-
-
         List<RaceCarRunnable> cars = new ArrayList<>();
 
-        cars.add(0,new RaceCarRunnable("Honda", 123, 300));
-        cars.add(1,new RaceCarRunnable("Lada", 90, 300));
-        cars.add(2,new RaceCarRunnable("Nissan", 200, 300));
-        cars.add(3,new RaceCarRunnable("Ford", 250, 300));
+        cars.add(new RaceCarRunnable("Honda", 123, 300));
+        cars.add(new RaceCarRunnable("Lada", 90, 300));
+        cars.add(new RaceCarRunnable("Nissan", 200, 300));
+        cars.add(new RaceCarRunnable("Ford", 250, 300));
 
         List<Thread> threads = new ArrayList<>(10);
 
-        threads.add(0, new Thread(cars.get(0)));
-        threads.add(1, new Thread(cars.get(1)));
-        threads.add(2, new Thread(cars.get(2)));
-        threads.add(3, new Thread(cars.get(3)));
+        cars.forEach(c -> threads.add(new Thread(c)));
 
         Race.startRace(threads);
-        countDownLatch.await();
+        Race.countDownLatch.await();
 
-        System.out.println("Winner " + cars.get(Race.winner(cars)).getName()
-                                    + "Time " + cars.get(Race.winner(cars)).getFinishTime());
+        System.out.println("\nWinner " + cars.get(Race.winner(cars)).getName()
+                                    + " Time " + Race.convertToTime(cars.get(Race.winner(cars))
+                                                                    .getFinishTime()));
 
 
 
@@ -44,29 +41,27 @@ public class Race {
 
     public static void startRace(List<Thread> cars){
 
-        Thread thread = new Thread( (new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("запуск отсчета");
+        Thread thread = new Thread( (() -> {
+            System.out.println("запуск отсчета");
 
-                for (int i = 5; i != 0; i--) {
-                    try {
-                        System.out.println( i);
-                        Thread.sleep(500);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-
+            for (int i = 5; i != 0; i--) {
+                try {
+                    System.out.println( i);
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-                System.out.println("GO!!!");
 
-                    for(int i=0; i<=3; i++){
-                        System.out.println("Запус потока " + i);
-                        cars.get(i).start();
-
-                }
             }
+            startRaceTime = System.currentTimeMillis();
+            System.out.println("GO!!! Start Time = " + Race.convertToTime(startRaceTime)  + "sec");
 
+
+                for(int i=0; i<=3; i++){
+                    System.out.println("Запус потока " + i);
+                    cars.get(i).start();
+
+            }
         }));
 
         thread.start();
@@ -78,13 +73,17 @@ public class Race {
         int numberWinner = 0;
 
         for(int i=0; i<cars.size(); i++){
-            if(winnerTime < cars.get(i).getFinishTime()){
+            if(winnerTime > cars.get(i).getFinishTime()){
                 winnerTime = cars.get(i).getFinishTime();
                 numberWinner = i;
             }
         }
 
         return numberWinner;
+    }
+
+    public static String convertToTime(long time){
+        return String.format("%02d:%02d:%02d", time / 1000 / 3600, time / 1000 / 60 % 60, time / 1000 % 60);
     }
 
 }

@@ -1,17 +1,13 @@
 package com.brainacad.laba22asd;
 
-import com.brainacad.laba22asd.Car;
-import com.brainacad.laba22asd.Race;
-
 import java.util.concurrent.CountDownLatch;
 
 public class RaceCarRunnable extends Car implements Runnable {
+
     private double passedDistance;
     private double distance;
     private boolean isFinish;
-
     private long finishTime;
-
     private CountDownLatch countDownLatch;
 
     public RaceCarRunnable(String name, int maxSpeed, double distance) {
@@ -30,16 +26,16 @@ public class RaceCarRunnable extends Car implements Runnable {
     public void run() {
         while (!isFinish){
             try {
-                Race.startRaceTime = System.currentTimeMillis();;
                 Thread.sleep(1000);
                 passedDistance = passedDistance +  getRandomSpeed()*1000/3600;
                 System.out.println(getName() + passedDistance);
+
                 if(passedDistance >= distance){
                     setFinish(true);
-                    countDownLatch.countDown();
-                    countDownLatch.await();
-                    System.out.println(getName() + " FINISHED!" + "Time = " + finishTime);
-                    finishTime = System.currentTimeMillis() - Race.startRaceTime;
+                    finishTime = System.currentTimeMillis() - Race.getStartRaceTime();
+                    System.out.println(getName() + " FINISHED!" + " Time = " + Race.convertToTime(finishTime)  + " sec");
+                    Race.countDownLatch.countDown();
+
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
